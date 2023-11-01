@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const initialItems = [
   { id: 1, description: 'Passport', quantity: 1, packed: true },
   { id: 2, description: 'Shirts', quantity: 4, packed: false },
@@ -20,6 +22,9 @@ function Logo() {
 }
 
 function Form() {
+  const [description, setDescription] = useState('');
+  const [quantity, setQuantity] = useState(1);
+
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -27,13 +32,22 @@ function Form() {
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>
-      <select>
+      <select
+        value={quantity}
+        onChange={(e) => setQuantity(Number(e.target.value))}
+      >
         {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
           <option value={num} key={num}>
             {num}
           </option>
         ))}
       </select>
+      <input
+        type="text"
+        placeholder="your item"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
       <button>Add</button>
     </form>
   );
