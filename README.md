@@ -2,6 +2,8 @@
 
 **Developer: Aleksandra Haniok**
 
+💻 [Visit live website](https://pack-wise.netlify.app/)
+
 ![Mockup](packwise-mockup-image.png)
 
 ### About
