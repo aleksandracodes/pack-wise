@@ -1,3 +1,5 @@
+import Delete from '../icons/delete.png';
+
 export default function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <li>
@@ -10,7 +12,9 @@ export default function Item({ item, onDeleteItem, onToggleItem }) {
       />
       <span style={item.packed ? { textDecoration: 'line-through' } : {}}>
         {item.quantity} {item.description}
-        <button onClick={() => onDeleteItem(item.id)}>❌</button>
+        <button onClick={() => onDeleteItem(item.id)}>
+          <img src={Delete} alt="X button" className="deleteIcon" />
+        </button>
       </span>
     </li>
   );

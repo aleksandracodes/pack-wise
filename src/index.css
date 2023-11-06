@@ -142,3 +142,12 @@ input[type='checkbox'] {
   font-weight: 700;
   padding: 3.2rem 0;
 }
+
+.logoIcon {
+  margin: 0 10px;
+}
+
+.deleteIcon {
+  margin: 0 5px;
+  width: 25px;
+}
